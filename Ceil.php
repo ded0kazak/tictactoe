@@ -10,11 +10,12 @@ class Ceil
 {
     private $name;
     private $position;
+    private $coordinates;
 
-    public function __construct(int $position)
+    public function __construct(int $position, Coordinates $coordinates)
     {
         $this->position = $position;
-
+        $this->coordinates = $coordinates;
     }
 
     /**
@@ -36,21 +37,17 @@ class Ceil
     /**
      * @return mixed
      */
-    public function getName()
+    public function getName(): ?int
     {
         return $this->name;
     }
 
-    private function getNeighboringPositions(int $position): array
+    /**
+     * @return Coordinates
+     */
+    public function getCoordinates(): Coordinates
     {
-        if ($this->position +1))
-            $result[] =
+        return $this->coordinates;
     }
-
-
-
-
-
-
 
 }
