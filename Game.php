@@ -18,17 +18,22 @@ class Game
 
     private $size;
 
-    public function start(int $size, int $dimension)
+    public function __construct(int $size, int $dimension)
     {
         $this->dimension = $dimension;
         $this->size = $size;
+    }
+
+    public function start(int $size, int $dimension)
+    {
+
         //if (!isset($_SESSION['collection'])) {
             $ceils = [];
             for ($i = 1; $i <= pow($size, 2); $i++) {
                 $ceils[] = new Ceil($i, $this->getCoordinates($i, $size));
             }
             $this->collection = new Collection($ceils);
-            $_SESSION['collection'] = $this->collection;
+            //$_SESSION['collection'] = $this->collection;
         //}
       //  else
         //    $this->collection = $_SESSION['collection'];
@@ -60,8 +65,10 @@ class Game
 
     public function setCeilName($position, $name)
     {
+
         $ceil = $this->getCeil($position);
-        $ceil->setName($name);
+        if (!$ceil->getName())
+            $ceil->setName($name);
         //return $name;
     }
 
