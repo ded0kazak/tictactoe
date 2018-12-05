@@ -17,17 +17,12 @@ class Coordinates
         $this->colN = $colN;
     }
 
-    /**
-     * @return int
-     */
     public function getRowN(): int
     {
         return $this->rowN;
     }
 
-    /**
-     * @return int
-     */
+
     public function getColN(): int
     {
         return $this->colN;

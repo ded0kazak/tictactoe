@@ -18,33 +18,22 @@ class Ceil
         $this->coordinates = $coordinates;
     }
 
-    /**
-     * @param mixed $name
-     */
-    public function setName($name): void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return int
-     */
+
     public function getPosition(): int
     {
         return $this->position;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getName(): ?int
+    public function getName(): ?string
     {
         return $this->name;
     }
 
-    /**
-     * @return Coordinates
-     */
     public function getCoordinates(): Coordinates
     {
         return $this->coordinates;

@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "classmap": ["controllers/", "models/"],
+    "files": [
+      "Caretacker.php",
+
+      "Memento.php",
+      "Router.php",
+      "Verify.php"
+    ]
+  }
+
+}
